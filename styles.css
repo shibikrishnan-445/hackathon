@@ -1,0 +1,294 @@
+/* ============================================================
+   WHIZZHACK'26 - WARM SOFT PEACH & LIGHT ORANGE THEME
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #F6C27A;
+  --bg-secondary: #FFE0A8;
+  --bg-card: rgba(255, 248, 235, 0.88);
+  --bg-card-hover: rgba(255, 252, 245, 0.95);
+  --accent-cyan: #D96B27;
+  --accent-blue: #E57E25;
+  --accent-purple: #C05621;
+  --accent-pink: #D97706;
+  --text-main: #2A1608;
+  --text-muted: #6B482B;
+  --glow-cyan: 0 0 25px rgba(217, 107, 39, 0.3);
+  --glow-purple: 0 0 30px rgba(192, 86, 33, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Headings font */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Space Grotesk', 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono-tech {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6C27A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D98232;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 240, 210, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C05621;
+  box-shadow: 0 0 10px rgba(192, 86, 33, 0.5);
+}
+
+/* Futuristic Grid Background */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(217, 107, 39, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(192, 86, 33, 0.08) 1px, transparent 1px);
+}
+
+.cyber-grid-dense {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(217, 107, 39, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(192, 86, 33, 0.06) 1px, transparent 1px);
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: rgba(255, 248, 235, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(217, 107, 39, 0.28);
+  color: #2A1608;
+}
+
+.glass-panel-cyan {
+  background: rgba(254, 243, 225, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(217, 107, 39, 0.35);
+  color: #2A1608;
+}
+
+.glass-panel:hover {
+  border-color: rgba(217, 107, 39, 0.55);
+  box-shadow: 0 12px 40px -10px rgba(180, 90, 20, 0.22);
+}
+
+/* Neon Gradient Text */
+.text-gradient-neon {
+  background: linear-gradient(135deg, #1F0E04 0%, #3D2008 30%, #B45309 70%, #D96B27 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #D96B27 0%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #C05621 0%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #7C4500 0%, #B45309 50%, #D96B27 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glowing Neon Button */
+.btn-neon-primary {
+  position: relative;
+  background: linear-gradient(135deg, #D96B27 0%, #E57E25 50%, #B45309 100%);
+  background-size: 200% 200%;
+  color: #FFFFFF;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(217, 107, 39, 0.35), inset 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-neon-primary:hover {
+  background-position: right center;
+  box-shadow: 0 6px 30px rgba(217, 107, 39, 0.55), 0 0 15px rgba(229, 126, 37, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-neon-outline {
+  position: relative;
+  background: rgba(255, 245, 230, 0.85);
+  border: 1.5px solid rgba(217, 107, 39, 0.6);
+  color: #2A1608;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.btn-neon-outline:hover {
+  background: rgba(217, 107, 39, 0.15);
+  border-color: #D96B27;
+  box-shadow: 0 4px 20px rgba(217, 107, 39, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Subtle Animated Ambient Glow Blobs */
+.glow-blob-purple {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(239, 168, 90, 0.4) 0%, rgba(255, 240, 210, 0.15) 50%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+  animation: pulse-slow 8s infinite alternate ease-in-out;
+}
+
+.glow-blob-blue {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(246, 194, 122, 0.45) 0%, rgba(255, 224, 168, 0.2) 50%, transparent 70%);
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+  animation: pulse-slow 10s infinite alternate-reverse ease-in-out;
+}
+
+@media (max-width: 640px) {
+  .glow-blob-purple, .glow-blob-blue {
+    width: 260px;
+    height: 260px;
+    filter: blur(35px);
+  }
+}
+
+@keyframes pulse-slow {
+  0% {
+    transform: scale(0.9) translate(0, 0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.15) translate(30px, -20px);
+    opacity: 1;
+  }
+}
+
+/* Circuit Line Animation */
+.circuit-line {
+  stroke-dasharray: 8 6;
+  animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* Floating animation */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(217, 107, 39, 0.3), inset 0 0 15px rgba(217, 107, 39, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(217, 107, 39, 0.6), inset 0 0 25px rgba(217, 107, 39, 0.3);
+  }
+}
+
+/* Tech Card Badge */
+.tech-tag {
+  background: rgba(217, 107, 39, 0.12);
+  border: 1px solid rgba(217, 107, 39, 0.35);
+  color: #7C3A11;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(217, 107, 39, 0.22);
+  border-color: rgba(217, 107, 39, 0.6);
+  color: #2A1608;
+}
+
+/* Responsive horizontal timeline scrollbar */
+.horizontal-scroll-container {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(217, 107, 39, 0.4) transparent;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(217, 107, 39, 0.4);
+  border-radius: 9999px;
+}
+
+/* Section Divider */
+.cyber-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(217, 107, 39, 0.3) 25%, rgba(192, 86, 33, 0.6) 50%, rgba(229, 126, 37, 0.3) 75%, transparent 100%);
+}
+
+/* Custom interactive canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
