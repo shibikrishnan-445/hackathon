@@ -34,7 +34,7 @@ export const EVENT_DETAILS = {
   stats: [
     { label: "PRIZE POOL", value: "₹50,000", subtext: "Worth of Prizes", icon: "Trophy" },
     { label: "TEAM MEMBERS", value: "3 – 5", subtext: "Per Team", icon: "Users" },
-    { label: "REGISTRATION FEE", value: "₹500", subtext: "Per Head Only", icon: "IndianRupee" },
+    { label: "REGISTRATION FEE", value: "₹300", subtext: "Per Head Only", icon: "IndianRupee" },
     { label: "DATES", value: "22–23", subtext: "September 2026", icon: "Calendar" }
   ],
   tracks: [
@@ -237,7 +237,7 @@ export const EVENT_DETAILS = {
   ],
   participationDetails: [
     { title: "Team Size", value: "3 – 5 Members", icon: "Users", desc: "Collaborate in diverse multidisciplinary teams" },
-    { title: "Registration Fee", value: "₹500 Per Head", icon: "IndianRupee", desc: "Affordable national-level participation" },
+    { title: "Registration Fee", value: "₹300 Per Head", icon: "IndianRupee", desc: "Affordable national-level participation" },
     { title: "Refreshments", value: "Provided", icon: "Coffee", desc: "Dinner, snacks, beverages & breakfast included" },
     { title: "Accommodation", value: "Provided", icon: "Bed", desc: "Campus stay arrangements for participating teams" },
     { title: "Tracks", value: "Software + Hardware", icon: "Cpu", desc: "Dedicated coding & hardware maker categories" },
@@ -245,7 +245,8 @@ export const EVENT_DETAILS = {
   ],
   prizes: {
     totalPool: "₹50,000",
-    announcement: "Exciting prizes will be awarded in both the Hardware and Software Track"
+    announcement: "Exciting prizes will be awarded in both the Hardware and Software Track",
+    internshipPerk: "🏆 Winners & Best Performing Teams will receive a FREE Industry-Aligned Internship opportunity at Wyntrix Innovation"
   },
   faqs: [
     {
@@ -258,7 +259,7 @@ export const EVENT_DETAILS = {
     },
     {
       q: "3. What is the registration fee?",
-      a: "The registration fee is ₹500 per head only."
+      a: "The registration fee is ₹300 per head only."
     },
     {
       q: "4. What are the available tracks?",
@@ -314,6 +315,23 @@ export const EVENT_DETAILS = {
       tier: "Featured Sponsor & Training Partner", 
       logoText: "NTCS", 
       image: "ntcs-sponsor.jpg", 
+      isHeadline: true 
+    },
+    { 
+      name: "Wyntrix Innovation", 
+      tagline: "Industry-Aligned Internships", 
+      highlight: "FREE Industry-Aligned Internship Opportunity", 
+      tier: "Official Sponsor & Internship Partner", 
+      logoText: "WYNTRIX", 
+      image: "wyntrix-sponsor.jpg", 
+      isHeadline: true 
+    },
+    { 
+      name: "Silicon Systems", 
+      tagline: "Infinite Solutions", 
+      tier: "Co-Sponsor", 
+      logoText: "SILICON SYSTEMS", 
+      image: "silicon-systems-sponsor.jpg", 
       isHeadline: true 
     }
   ]

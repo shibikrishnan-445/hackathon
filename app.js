@@ -27,7 +27,7 @@ const EVENT_DETAILS = (typeof window !== "undefined" && window.WHIZZHACK_CONFIG)
   stats: [
     { label: "PRIZE POOL", value: "₹50,000", subtext: "Worth of Prizes", icon: "Trophy" },
     { label: "TEAM MEMBERS", value: "3 – 5", subtext: "Per Team", icon: "Users" },
-    { label: "REGISTRATION FEE", value: "₹500", subtext: "Per Head Only", icon: "IndianRupee" },
+    { label: "REGISTRATION FEE", value: "₹300", subtext: "Per Head Only", icon: "IndianRupee" },
     { label: "DATES", value: "22–23", subtext: "September 2026", icon: "Calendar" }
   ],
   tracks: [
@@ -80,7 +80,7 @@ const EVENT_DETAILS = (typeof window !== "undefined" && window.WHIZZHACK_CONFIG)
   ],
   participationDetails: [
     { title: "Team Size", value: "3 – 5 Members", icon: "Users", desc: "Collaborate in diverse multidisciplinary teams" },
-    { title: "Registration Fee", value: "₹500 Per Head", icon: "IndianRupee", desc: "Affordable national-level participation" },
+    { title: "Registration Fee", value: "₹300 Per Head", icon: "IndianRupee", desc: "Affordable national-level participation" },
     { title: "Refreshments", value: "Provided", icon: "Coffee", desc: "Dinner, snacks, beverages & breakfast included" },
     { title: "Accommodation", value: "Provided", icon: "Bed", desc: "Campus stay arrangements for participating teams" },
     { title: "Tracks", value: "Software + Hardware", icon: "Cpu", desc: "Dedicated coding & hardware maker categories" },
@@ -93,7 +93,7 @@ const EVENT_DETAILS = (typeof window !== "undefined" && window.WHIZZHACK_CONFIG)
   faqs: [
     { q: "1. Who can participate?", a: "WHIZZHACK'26 is a National-Level Mega Tech Hackathon for student innovators. Please contact the event coordinators for further details on department or institution eligibility." },
     { q: "2. What is the team size?", a: "Teams must consist of 3 to 5 members." },
-    { q: "3. What is the registration fee?", a: "The registration fee is ₹500 per head only." },
+    { q: "3. What is the registration fee?", a: "The registration fee is ₹300 per head only." },
     { q: "4. What are the available tracks?", a: "There are two major tracks: SOFTWARE TRACK (Code • Build • Solve) and HARDWARE TRACK (Design • Innovate • Impact)." },
     { q: "5. Is accommodation provided?", a: "Yes, accommodation will be provided for the participants." },
     { q: "6. Are refreshments provided?", a: "Yes, refreshments, dinner, midnight tea/snacks, and breakfast will be provided throughout the event schedule." },
@@ -120,6 +120,23 @@ const EVENT_DETAILS = (typeof window !== "undefined" && window.WHIZZHACK_CONFIG)
       tier: "Featured Sponsor & Training Partner", 
       logoText: "NTCS", 
       image: "ntcs-sponsor.jpg", 
+      isHeadline: true 
+    },
+    { 
+      name: "Wyntrix Innovation", 
+      tagline: "Industry-Aligned Internships", 
+      highlight: "FREE Industry-Aligned Internship Opportunity", 
+      tier: "Official Sponsor & Internship Partner", 
+      logoText: "WYNTRIX", 
+      image: "wyntrix-sponsor.jpg", 
+      isHeadline: true 
+    },
+    { 
+      name: "Silicon Systems", 
+      tagline: "Infinite Solutions", 
+      tier: "Co-Sponsor", 
+      logoText: "SILICON SYSTEMS", 
+      image: "silicon-systems-sponsor.jpg", 
       isHeadline: true 
     }
   ]
@@ -526,11 +543,28 @@ const SponsorCarousel = () => {
       bgColor: 'bg-white',
       borderColor: 'border-amber-200',
       image: 'ntcs-sponsor.jpg'
+    },
+    {
+      id: 'wyntrix',
+      name: 'Wyntrix Innovation',
+      role: 'Internship Partner',
+      bgColor: 'bg-[#0B1120]',
+      borderColor: 'border-amber-400/90 shadow-md shadow-amber-500/20',
+      image: 'wyntrix-sponsor.jpg',
+      isGold: true
+    },
+    {
+      id: 'siliconsystems',
+      name: 'Silicon Systems',
+      role: 'Co-Sponsor',
+      bgColor: 'bg-white',
+      borderColor: 'border-amber-300/80',
+      image: 'silicon-systems-sponsor.jpg'
     }
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
       {sponsors.map((sponsor, index) => (
         <div
           key={index}
@@ -886,13 +920,13 @@ const Hero = () => {
             {/* Separator Line */}
             <div className="hidden sm:block h-12 w-[1px] bg-[#D98232]/30"></div>
 
-            {/* Co-Sponsors */}
+            {/* Co-Sponsors & Partners */}
             <div className="flex flex-col items-center">
               <span className="text-[10px] sm:text-xs font-mono-tech font-bold text-[#B45309] uppercase tracking-widest mb-1.5 flex items-center gap-1">
                 <Icon name="Award" size={13} className="text-[#D96B27]" />
-                CO-SPONSORS
+                OFFICIAL SPONSORS & PARTNERS
               </span>
-              <div className="flex items-center justify-center gap-2 sm:gap-3">
+              <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-3">
                 <div className="p-2 rounded-xl bg-white border border-amber-300/80 shadow-md flex items-center justify-center hover:scale-105 transition-transform">
                   <img 
                     src="britannia-sponsor.jpg" 
@@ -904,6 +938,20 @@ const Hero = () => {
                   <img 
                     src="ntcs-sponsor.jpg" 
                     alt="NTCS - Co-Sponsor" 
+                    className="h-8 sm:h-10 w-auto object-contain rounded"
+                  />
+                </div>
+                <div className="p-2 rounded-xl bg-[#0E0702] border border-amber-500/80 shadow-md flex items-center justify-center hover:scale-105 transition-transform">
+                  <img 
+                    src="wyntrix-sponsor.jpg" 
+                    alt="Wyntrix Innovation - Internship Partner" 
+                    className="h-8 sm:h-10 w-auto object-contain rounded"
+                  />
+                </div>
+                <div className="p-2 rounded-xl bg-white border border-amber-300/80 shadow-md flex items-center justify-center hover:scale-105 transition-transform">
+                  <img 
+                    src="silicon-systems-sponsor.jpg" 
+                    alt="Silicon Systems - Co-Sponsor" 
                     className="h-8 sm:h-10 w-auto object-contain rounded"
                   />
                 </div>
@@ -1460,6 +1508,27 @@ const PrizesSection = () => {
           <span className="flex items-center gap-1.5 text-[#C05621] font-bold">
             <Icon name="Award" size={14} /> Merit & Participation Certificates
           </span>
+        </div>
+      </div>
+
+      {/* Special Internship Partner Banner */}
+      <div className="glass-panel rounded-3xl p-6 sm:p-8 text-center max-w-4xl mx-auto border-2 border-amber-500/70 shadow-2xl relative overflow-hidden mb-10 bg-gradient-to-r from-[#1A0C04] via-[#2A1608] to-[#1A0C04] text-white group hover:border-amber-400 transition-all">
+        <div className="absolute -top-16 -right-16 w-36 h-36 bg-amber-500/20 rounded-full blur-2xl pointer-events-none"></div>
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-mono-tech tracking-wider uppercase mb-4 shadow-sm">
+          <Icon name="Sparkles" size={14} className="text-amber-400" />
+          EXCLUSIVE INTERNSHIP OPPORTUNITY
+        </div>
+        <h3 className="font-heading font-black text-lg sm:text-2xl md:text-3xl text-amber-200 tracking-tight leading-snug max-w-3xl mx-auto">
+          🏆 Winners & Best Performing Teams will receive a FREE Industry-Aligned Internship opportunity at Wyntrix Innovation
+        </h3>
+        <div className="mt-5 flex items-center justify-center gap-3">
+          <div className="p-2 rounded-xl bg-[#0E0702] border border-amber-500/70 shadow-md">
+            <img src="wyntrix-sponsor.jpg" alt="Wyntrix Innovation" className="h-10 sm:h-12 w-auto object-contain rounded" />
+          </div>
+          <div className="text-left">
+            <p className="text-xs font-bold text-amber-400 font-mono-tech uppercase tracking-wide">Wyntrix Innovation</p>
+            <p className="text-[11px] text-amber-200/80">Official Sponsor & Internship Partner</p>
+          </div>
         </div>
       </div>
 
